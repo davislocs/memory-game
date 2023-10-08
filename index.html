@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORY GAME</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/fav-icon.png">
+</head>
+<body>
+    <main id="start-menu-page" class="stert-menu-page">
+        <input id="generate-btn" class="btn" type="button" value="Generate receipts">
+        <input id="to-config-btn" class="btn" type="button" value="Dificultie configurations">
+    </main>
+
+    <main id="config-page" class="config-page">
+        <form class="config-form" action="">
+            <label for="max-checks" class="config-label">
+                Max amount of checks(1-3):
+                <input id="max-checks" class="config-input" type="number" min="1" max="3">
+            </label>
+            <label for="min-checks" class="config-label">
+                Min amount of checks(1-3):
+                <input id="min-checks" class="config-input" type="number" min="1" max="3">
+            </label>
+            <label for="max-foods" class="config-label">
+                Max amount of foods on check(1-8):
+                <input id="max-foods" class="config-input" type="number" min="1" max="8">
+            </label>
+            <label for="min-foods" class="config-label">
+                Min amount of foods on check(1-8):
+                <input id="min-foods" class="config-input" type="number" min="1" max="8">
+            </label>
+        </form>
+        <input id="apply-btn" class="btn small-btn" type="button" value="Apply changes">
+        <input id="conf-back-btn" class="btn small-btn" type="button" value="Back to menu">
+    </main>
+
+    <main id="game-page" class="game-page">
+        <section class="btn-section">
+            <input id="remember-btn" class="btn small-btn" type="button" value="Remeber!">
+            <input id="game-back-btn" class="btn small-btn" type="button" value="Back to menu">
+        </section>
+        <section id="check-section" class="check-section">
+            <!-- check template -->
+        </section>
+        <section class="check-template hidden">
+            <div id="checkID" class="regular-check">
+                <div class="check-header">
+                    <div class="top-header">
+                        <p>Čeka nr: <span class="check-nr"> 257</span></p>
+                        <p><span class="weiter-name"></span><span class="weiter-surname"></span></p>
+                    </div>
+                    <div class="mid-header">
+                        <p class="comp-name">SIA "kaku rastorans"</p>
+                        <p class="adress">Riga, Brivibas iela 29, LV 3812</p>
+                        <p class="reg-nr">Reg nr: <span>1249985719510938</span></p>
+                    </div>
+                    <div class="bottom-header">
+                        <p>#<span class="table-nr"></span></p>
+                    </div>
+                </div>
+                <div class="main-check">
+                    <!-- food templates  -->
+                </div>
+            </div>
+        </section>
+        <section class="food-template hidden">
+            <div id="foodID" class="food">
+                <h2 class="food-name">pica<span class="size"></span></h2>
+                <div id="food-opt" class="food-opt">
+                    <p class="option"></p>
+                    <p class="option"></p>
+                    <p class="option"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
